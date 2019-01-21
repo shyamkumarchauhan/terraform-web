@@ -29,7 +29,7 @@ pipeline {
         }
         stage('terraform apply') {
             steps {
-                sh 'ls ./terraform-web;export AWS_DEFAULT_REGION=us-east-2;terraform apply -input=false -auto-approve ./terraform-web;cp -rp ./terraform-web /var/tmp/terraform-poc-asg-delete'
+                sh 'ls ./terraform-web;export AWS_DEFAULT_REGION=us-east-2;terraform apply -input=false -auto-approve ./terraform-web'
             }
         }
         stage('terraform ended') {
