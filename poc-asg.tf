@@ -125,7 +125,7 @@ resource "aws_launch_configuration" "zantac-lc" {
   key_name               = "${var.key_name}"
   user_data = <<-EOF
               #!/bin/bash
-              echo "Welcome to Zantac PoC" > index.html
+              echo "Welcome to BSC Automation PoC" > index.html
               echo "My hostname is : $(hostname)" > index.html
               nohup busybox httpd -f -p 8080 &
               EOF
